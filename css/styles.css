@@ -31,12 +31,15 @@ body {
     text-decoration: none;
     letter-spacing: 2px;
     color: #ffffff;
-    -webkit-box-reflect: below 0px linear-gradient(transparent, #000200);
+    /* -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #000200); */
     transition: 0.5s;
+    transition-delay: 0s;
 }
 
 .page-container a:hover {
+    transition-delay: 1.2s;
     color: #000000;
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00, 0 0 160px #00ff00;
 }
 
 .page-container a span {
