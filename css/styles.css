@@ -4,3 +4,90 @@
     box-sizing: border-box;
     font-family: 'Radio Canada', sans-serif;
 }
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+
+.page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.page-container a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #00ff00;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #ffffff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #000200);
+    transition: 0.5s;
+}
+
+.page-container a:hover {
+    color: #000000;
+}
+
+.page-container a span {
+    position: relative;
+    z-index: 100;
+}
+
+.page-container a:nth-child(2) {
+    filter: hue-rotate(80deg);
+}
+
+.page-container a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #00ff00;
+    box-shadow: 5px -8px 0 #00ff00, 5px 8px 0 #00ff00;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.page-container a:hover::before {
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #00ff00, 5px 0 0 #00ff00;
+    transition-delay: 0s, 0s, 1s, 1s;
+}
+
+.page-container a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #00ff00;
+    box-shadow: -5px -8px 0 #00ff00, -5px 8px 0 #00ff00;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.page-container a:hover::after {
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 #00ff00, -5px 0 0 #00ff00;
+    transition-delay: 0s, 0s, 1s, 1s;
+}
